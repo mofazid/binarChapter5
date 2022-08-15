@@ -1,0 +1,32 @@
+{
+  "name": "binarchapter5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "g it+https://github.com/mofazid/binarChapter5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mofazid/binarChapter5/issues"
+  },
+  "homepage": "https://github.com/mofazid/binarChapter5#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "jquerry": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

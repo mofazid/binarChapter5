@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap");
+
+.banner {
+	background: url("/assets/bg\ image\ 1.jpg") no-repeat center center;
+	background-size: cover;
+	padding-top: 20%;
+	padding-bottom: 20%;
+	color: #fff;
+}
+
+.banner1 {
+	background: url("/assets/bg\ image\ 2.jpg") no-repeat;
+	padding-top: 20%;
+	padding-bottom: 20%;
+	color: #fff;
+}
+
+.carousel {
+	width: 900px;
+	height: 470px;
+}
+
+.banner2 {
+	background-image: url("/assets/bg\ image\ 3.png");
+	padding-top: 20%;
+	padding-bottom: 20%;
+	background-size: cover;
+	border-radius: 0px;
+	padding-left: 10%;
+	background-position: -150px;
+}
+
+.banner3 {
+	background: url("/assets/bg\ image\ 4.png") no-repeat center center;
+	background-size: cover;
+	padding-top: 7%;
+	padding-bottom: 20%;
+}
+
+.banner3 h1 {
+	font-size: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	size: 56px;
+	letter-spacing: 3px;
+}
+
+.banner4 {
+	background: url("/assets/bg\ image\ 5.png") no-repeat center center;
+	background-size: cover;
+}
+
+.banner5 {
+	padding-top: 10%;
+	background-size: cover;
+	border-radius: 0px;
+	background-color: black;
+}
+
+.text {
+	font-size: 20px;
+	padding-bottom: 100px;
+}
+
+a.social {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	color: #fff;
+	border-radius: 50%;
+	padding-left: 70px;
+}
+
+.client img {
+	height: auto;
+	max-height: 50px;
+	width: 200px;
+}
+
+.btn {
+	width: 300px;
+	height: 50px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-weight: 600;
+	background-color: orange;
+}
+
+.container h1 {
+	font-family: "Arial";
+
+	font-weight: 500;
+
+	text-transform: uppercase;
+}
+
+.bg {
+	opacity: 100%;
+}
+
+.carousel-inner {
+	width: 500px;
+}
+
+.section2 {
+	height: auto;
+	max-height: 50px;
+	width: 200px;
+}
+
+.nav-link {
+	color: #fff;
+	font-size: 14px;
+	margin-left: 50px;
+	font-family: open Sans;
+}
+
+.navbar-brand {
+	padding-inline: 75px;
+	font-size: 25px;
+	font-weight: 600;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.carousel-item {
+	height: 600px;
+}
+
+.footer {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
