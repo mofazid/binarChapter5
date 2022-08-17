@@ -70,21 +70,21 @@ app.post('/users',jsonParser, async (req, res) => {
 app.post('/users/login', async (req,res)=>{
   if (req.body.name === result[0].name && req.body.password == result[0].password) {
     res.send('login success')
-    login.push('login success')
+    login.push('success')
     console.log(login)
   } else {
     res.send('login failed')
-    login.push('login failed')
+    login.push('failed')
     console.log(login)
   }
 })
 
 //getting the login status
 app.get('/users/login', async (req,res)=>{
-    if (login[0] = 'success') {
+    if (login[0] == 'success') {
       res.send('login success')
       console.log(login)
-    } else {
+    } else if (login[0] == 'failed') {
       res.send('login failed')
       console.log(login)
     }
