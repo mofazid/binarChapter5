@@ -18,36 +18,35 @@ app.use('/js', express.static(__dirname+'/js'))
 app.use('/assets', express.static(__dirname+'/assets'))
 
 app.use(express.json())
+const jsonParser = bodyParser.json()
 
 
-
+//Home Page
 app.get('/', (req,res)=>{
   res.render('home')
 })
 
+//testing post
+app.post('/', (req, res)=>{
+  console.log(req.body)
+  res.status(201).send('hello')
+})
+
+
+//getting users.json
 users = getUsers('users.json')
 
-// create api to get user data as json
+//showing searched users
 app.get('/users',async  (req,res)=>{
   res.send(result)
 })
 
+
 let result = []
+let login = []
 
-app.post('/users', async (req, res) => {
-  // let bodyName = req.body.name
-
-  // for (let i = 0; i < users.length; i++) {
-
-  //   try {
-  //     if (users[i].name.toLowerCase().includes(bodyName.toLowerCase())) {
-  //       result.push(users[i])
-  //     }
-  //   } catch (error) {
-  //     console.log('no user found')
-  //   }
-
-  // res.status(201).send(result)
+//searching users and push the result to result array
+app.post('/users',jsonParser, async (req, res) => {
 
   let bodyName = req.body.name
 
@@ -63,42 +62,44 @@ app.post('/users', async (req, res) => {
 
   }
   res.status(201).send(result)
-})
-
-app.get('/users', async (req, res) => {
-  res.send(result)
+  console.log(result[0])
 })
 
 
+//logging in with posted username and password
 app.post('/users/login', async (req,res)=>{
-  try {
-    if (req.body.name == result.name && req.body.password == result.password) {
+  if (req.body.name === result[0].name && req.body.password == result[0].password) {
+    res.send('login success')
+    login.push('login success')
+    console.log(login)
+  } else {
+    res.send('login failed')
+    login.push('login failed')
+    console.log(login)
+  }
+})
+
+//getting the login status
+app.get('/users/login', async (req,res)=>{
+    if (login[0] = 'success') {
       res.send('login success')
+      console.log(login)
     } else {
       res.send('login failed')
+      console.log(login)
     }
-  } catch (error) {
-    console.log(error)
-  }
-
 })
 
 
+//rendering play page
 app.get('/play', (req,res)=>{
   res.render('play')
 })
 
-app.get('/success', (req,res)=>{
-  res.render('success')
-})
 
 
 
-app.post('/', (req, res)=>{
-  console.log(req.body)
-  res.status(201).send('hello')
-})
-
+//listening to port 3000
 app.listen(3000, () => {
   console.log("Application is running at localhost:3000")
 })
